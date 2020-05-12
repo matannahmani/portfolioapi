@@ -12,7 +12,7 @@ class InquiresControllerTest < ActionDispatch::IntegrationTest
 
   test "should create inquire" do
     assert_difference('Inquire.count') do
-      post inquires_url, params: { inquire: {  } }, as: :json
+      post inquires_url, params: { inquire: { email: @inquire.email, name: @inquire.name, text: @inquire.text } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class InquiresControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update inquire" do
-    patch inquire_url(@inquire), params: { inquire: {  } }, as: :json
+    patch inquire_url(@inquire), params: { inquire: { email: @inquire.email, name: @inquire.name, text: @inquire.text } }, as: :json
     assert_response 200
   end
 
