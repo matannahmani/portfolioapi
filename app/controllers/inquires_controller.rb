@@ -1,4 +1,5 @@
 class InquiresController < ApplicationController
+  require 'pry-byebug'
   before_action :set_inquire, only: [:show, :update, :destroy]
 
   # GET /inquires
