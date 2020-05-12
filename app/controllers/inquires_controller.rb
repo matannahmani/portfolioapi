@@ -47,6 +47,6 @@ class InquiresController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def inquire_params
-      params.require(:inquire).permit(:name, :email, :text)
+      params.require(:inquire).permit(:name, :email, :msg)
     end
 end
